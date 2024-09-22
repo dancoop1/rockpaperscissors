@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+<script>
+/* pseudocode 
+1. Initialize variables.
+    a. Computer choice.
+    b. Player choice.
+2. Get the computer's choice.
+3. Get the player's choice.
+4. Establish rules.
+5. Play the game i.e. compare the two choices.
+    a. If both choices are the same, reset the game.
+    b. If player choice beats computer, display win condition.
+    c. If computer choice beats player, display lose condition.
+6. Reset the game.
+*/
+
+let computerChoice = getComputerChoice();
+console.log("Computer choice: ", computerChoice);
+
+function getComputerChoice() {
+    let randomNumber = Math.random();
+    console.log("Computer random number: ", randomNumber);
+    if (randomNumber <= 0.33333) {
+        choice = 'rock';
+    } else if (randomNumber > 0.33333 && randomNumber <= 0.66666) {
+        choice = 'paper';
+    } else {
+        choice = 'scissors';
+    }
+
+    return choice;
+}
+
+
+</script>
+
+
+
+</body>
+</html>
